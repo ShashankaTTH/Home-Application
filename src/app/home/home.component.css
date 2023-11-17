@@ -1,0 +1,31 @@
+body{
+    background-color: grey;
+    z-index: 0;
+    
+}
+
+img {
+z-index: 5;
+border-bottom-right-radius: 3rem;
+}
+
+
+
+h3{
+    z-index: 10;
+    
+    margin-top: -14rem;
+   margin-left: 50rem;
+    font-size: 3rem;
+    word-break: break-all;
+    color: white;
+    width: 30rem;
+    font-family: 'popins';
+    
+}
+
+h3:hover {
+    font-size: 3.1rem;
+    width: 35rem;
+    color: darkturquoise;;
+} 

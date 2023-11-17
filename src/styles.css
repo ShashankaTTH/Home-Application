@@ -1,1 +1,12 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+  @font-face {
+    font-family: 'Popins';
+    src: url('../src/assets/popins/Poppins-Light.ttf') format('truetype');
+  }
+
+body{
+    background-color: grey;
+}
 /* You can add global styles to this file, and also import other style files */
