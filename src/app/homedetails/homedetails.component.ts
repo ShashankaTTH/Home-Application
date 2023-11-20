@@ -1,39 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeSService } from '../home-s.service';
-import { Observable, switchMap } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Ihome } from '../ihome';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-homedetails',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './homedetails.component.html',
   styleUrls: ['./homedetails.component.css']
 })
 export class HomedetailsComponent implements OnInit {
-  HomeId!: number;
-  Home: Ihome | undefined;
+  home:Ihome|null=null;
+ 
 
-  constructor(private homeS: HomeSService, private route: ActivatedRoute) {}
+  constructor(private router: Router,private activatedRoute: ActivatedRoute, private homeService: HomeSService) { }
 
-  ngOnInit() {
-    debugger
-    this.route.paramMap
-      .pipe(
-        switchMap(params => {
-          this.HomeId = +params.get('id')!;
-          return this.gethomeDetails(this.HomeId);
-        })
-      )
-      .subscribe(home => {
-        this.Home = home;
-      });
-  }
 
-  gethomeDetails(homeId: number): Observable<Ihome | undefined> {
-    alert("fetching data from service")
-    return this.homeS.getHomeById(homeId);
+  ngOnInit():void{
+    const homeId= parseInt(this.activatedRoute.snapshot.paramMap.get('id')!,10);
+    this.home = this.homeService.getHomeById(homeId);
+  
   }
 }

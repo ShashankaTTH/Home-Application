@@ -1,9 +1,10 @@
-<div *ngIf="Home">
-    <img style="height: 45%; width: 45%; border-bottom-right-radius: 30px;" [src]="Home.home">
-    <p>Name: {{ Home.name }}</p>
-    <p>Description: {{ Home.des }}</p>
-    <p>Owner: {{ Home.owner }}</p>
-    <p>Location: {{ Home.location }}</p>
-    <p>Contact: {{ Home.contact }}</p>
-  </div>
-  
+<div class="home-details__info">
+  <img style="height: 50%; width: 50%;" [src]="home?.home">
+  <h2>{{home?.name}}</h2>
+  <p>{{home?.des}}</p>
+  <ul>
+    <li>Owner: {{home?.owner}}</li>
+    <li>Location: {{home?.location}}</li>
+    <li>Contact: {{home?.contact}}</li>
+  </ul>
+</div>

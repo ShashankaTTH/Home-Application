@@ -1,6 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Ihome } from './ihome';
+
 import { Observable, of } from 'rxjs';
+
+export interface Ihome {
+  id: number;
+  home: string;
+  name: string;
+  des: string;
+  owner: string;
+  location: string;
+  contact: number;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +41,16 @@ export class HomeSService {
 
   constructor() { }
 
-  getHomeById(id: number): Observable<Ihome | undefined> {
-    alert("Hitting service")
-    const foundHome = this.homes.find(home => home.id === id);
-    return of(foundHome);
+  getHomes(): Ihome[] {
+    return this.homes;
   }
+
+  getHomeById(id: number): Ihome {
+    return this.homes.find(home => home.id === id)!;
+  }
+
+  // getHomeById(id: number): Observable<Ihome | undefined> {
+  //   const home = this.homes.find((h) => h.id === id);
+  //   return of(home);
+  // }
 }
