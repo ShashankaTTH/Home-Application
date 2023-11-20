@@ -11,6 +11,7 @@ border-bottom-right-radius: 3rem;
 
 
 
+
 h3{
     z-index: 10;
     
@@ -22,6 +23,19 @@ h3{
     width: 30rem;
     font-family: 'popins';
     
+}
+.explorebutton {
+    margin-top: 1rem;
+    margin-left: 50rem;
+    width: 150px;
+    font-size: 1.2rem;
+    font-family: 'popins';
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    
+
 }
 
 h3:hover {

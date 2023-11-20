@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Ihome } from '../ihome';
+import { Ihome } from '../ihome';import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-check-homes',
@@ -10,7 +11,16 @@ import { Ihome } from '../ihome';
   styleUrl: './check-homes.component.css'
 })
 export class CheckHomesComponent {
-  homes: Ihome[] = [
+  HomeId:any;
+  constructor(private router: Router) {}
+
+
+ onShowhomedetailsClick(HomeId: any): void {
+  this.router.navigate(['Homedetails', HomeId]);
+  alert("home id is "+ HomeId)
+ }
+
+  homes: any[] = [
     {
       id: 1,
       home: 'assets/shashank.jpg',
@@ -25,4 +35,6 @@ export class CheckHomesComponent {
     }
 
   ];
+
+  
 }
