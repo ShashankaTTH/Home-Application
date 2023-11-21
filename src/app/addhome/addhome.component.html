@@ -1,0 +1,32 @@
+<head><style>body{background-image:url(assets/background.jpg);}</style></head>
+<form [formGroup]="homeForm" (ngSubmit)="onSubmit()">
+    <h3>Add Home</h3>
+    <body>
+        <label for="id">ID:</label>
+    <input type="number" id="id" formControlName="id" required>
+  
+   
+  
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+  
+    <label for="des">Description:</label>
+    <input type="text" id="des" formControlName="des">
+  
+    <label for="owner">Owner:</label>
+    <input type="text" id="owner" formControlName="owner">
+  
+    <label for="location">Location:</label>
+    <input type="text" id="location" formControlName="location">
+  
+    <label for="contact">Contact:</label>
+    <input type="number" id="contact" formControlName="contact" required>
+
+     <label for="home">Home:</label>
+    <input type="file" id="home" formControlName="home">
+    </body>
+    
+  
+    <button type="submit">Submit</button>
+  </form>
+  

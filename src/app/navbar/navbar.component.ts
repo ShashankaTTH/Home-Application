@@ -17,4 +17,7 @@ export class NavbarComponent {
   
     window.location.href ='checkhomes'
    }
+   AddHomes(){
+    window.location.href='addhomes'
+   }
 }

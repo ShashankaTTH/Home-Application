@@ -25,7 +25,7 @@ export class HomeSService {
       name: 'Shashanks home',
       des: 'best home in the world',
       owner: 'shashank',
-      location: 'kollegala',
+      location: 'Mysore',
       contact: 100
     },
     {

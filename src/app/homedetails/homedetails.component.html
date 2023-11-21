@@ -1,5 +1,8 @@
-<div class="home-details__info">
-  <img style="height: 50%; width: 50%;" [src]="home?.home">
+<div >
+  <img [src]="home?.home">
+  </div>
+  <div class="details" >
+ <div class="contents">
   <h2>{{home?.name}}</h2>
   <p>{{home?.des}}</p>
   <ul>
@@ -7,4 +10,5 @@
     <li>Location: {{home?.location}}</li>
     <li>Contact: {{home?.contact}}</li>
   </ul>
+ </div>
 </div>
